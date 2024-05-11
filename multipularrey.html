@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrey</title>
+</head>
+<body>
+    <script>
+        var multiArrey = [
+            ["Salah","liverpool",38,"egypt"],
+            ["Ronaldo","madrid",40,"purtogal"],
+            ["Neymar","Barcelona",35,"Brazil"],
+            ["Messi","mayami",42,"Argentina"],
+            ["Messi","mayami",42,"Argentina"],
+            ["De Bruyne","city",28,"Belziam"],
+            ["camavinga","madrid",24,"france"],
+            [12,38,24,41]
+           
+        ];
+        document.write("<table border='1px'>");
+            document.write("<th>" + "Name" + "</th>");
+            document.write("<th>" + "Club" + "</th>");
+            document.write("<th>" + "age" + "</th>");
+            document.write("<th>" + "Nationality" + "</th>");
+            document.write("<th>" + multiArrey.length + "</th>");
+        for(var a=0; a < 8; a++){
+            document.write("<tr>");
+                multiArrey[0][0] = "Shohan";
+                    delete multiArrey[4][1];
+                
+            for(var b=0; b < 5; b++){  
+                document.write ("<td>" + '<span style="font-size: 20px;">' + multiArrey[a][b]+ " " + "</td>");
+            }
+        }
+        document.write("</table>");
+
+
+        document.write ("<h4>" +" short and reserv arrey" + "</h4>");
+
+        multiArrey[2].sort();
+        document.write(multiArrey[2] + "<br>");
+        multiArrey[2].reverse();
+        document.write(multiArrey[2] + "<br>");
+
+        
+        document.write ("<h4>" +" pop and push arrey" + "</h4>");
+        multiArrey[3].pop()
+        document.write( multiArrey[3] + "<br>")
+        multiArrey[3].pop()
+        document.write( multiArrey[3] + "<br>")
+        multiArrey[3].push(80)
+        document.write( multiArrey[3] + "<br>")
+        multiArrey[3].push("La Albiceleste")
+        document.write( multiArrey[3] + "<br>")
+
+        document.write ("<h4>" +" shift and unshift arrey" + "</h4>");
+        multiArrey[1].shift()
+        document.write(multiArrey[1] + "<br>")
+        multiArrey[1].unshift("Shohan")
+        document.write(multiArrey[1])
+
+        document.write ("<h4>" +" concat and join arrey" + "</h4>");
+        var concat = multiArrey[0].concat(multiArrey[1],multiArrey[2]);
+        document.write(concat + "<br>");
+        var jon = concat.join(" - ");
+        document.write(jon);
+
+
+        document.write ("<h4>" +" Slice & Splice arrey" + "</h4>");
+
+        var sl = multiArrey[5].slice(1,4);
+        document.write(sl + "<br>");
+        multiArrey[5].splice(1,1, "manchester city");
+        document.write(multiArrey[5]);
+
+
+        document.write ("<h4>" +" isArray arrey check" + "</h4>");
+        var check = multiArrey[6];
+        document.write(multiArrey[6] + "<br <br>");
+
+        if(Array.isArray(multiArrey[6])){
+            document.write("This is arrey");
+        }else{
+            document.write("this is not arrey");
+        }
+        document.write ("<h4>" +" Array Includes Method" + "</h4>");
+        var inc = multiArrey.includes("bangladesh");
+        document.write(inc);
+
+
+
+
+    </script>
+<script>
+        document.write("<h4>" + "Some & Every Array " + "</h4>");
+var allAges = multiArrey[0].some(check);
+document.write(allAges + "<br>");
+
+function check(age) {
+    return age >=10;
+}
+
+document.write("<h3>" + "find & findIndex Every Array " + "</h3>")
+var fin = multiArrey[7].find(chakAge);
+document.write(fin + "<br>");
+var fin = multiArrey[7].findIndex(chakAge);
+document.write(fin + "<br>");
+var fin = multiArrey[7].filter(chakAge);
+document.write(fin + "<br>");
+
+function chakAge(aeg){
+    return aeg > 30;
+}
+
+document.write("<h3>" + "Array toString, valueOf & fill Methods " + "</h3>")
+multiArrey[3].toString;
+document.write(multiArrey[3]);
+
+</script>
+
+</body>
+</html>
